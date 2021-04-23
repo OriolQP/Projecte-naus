@@ -11,17 +11,17 @@ body { margin:10px; background-image: url("../images/wall.jpg"); }
   font-size: 20px;
   height: 20px; width: 700px;
 }
-#my_canvas{ 
-  background:#000000; 
-  border:#000 1px solid; 
+#my_canvas{
+  background:#000000;
+  border:#000 1px solid;
 }
 .boton{
-    color:red;
+    color:black;
     font-size: 40px;
-    background-color: #000000;
+    background-color: white;
     cursor: pointer;
     border-radius: 8px;
-    border:2px solid blue;
+    border:2px solid black;
 }
 .boton:hover{
     background-color: white;

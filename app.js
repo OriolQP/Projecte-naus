@@ -11,9 +11,9 @@ function initCanvas(){
     // Enemigos fotos
     enemiespic1.src     = "images/enemigo1.png";
     enemiespic2.src     = "images/enemigo2.png"; //Enemies picture
-    
+
     // width and height (canvas)
-    var cW = ctx.canvas.width; // 700px 
+    var cW = ctx.canvas.width; // 700px
     var cH = ctx.canvas.height;// 600px
 
     // template for naves
@@ -55,7 +55,7 @@ function initCanvas(){
                   ];
 
     // This allows for more enemies to be rendered without needing a function per set of enemies.
-    // This also forces enemies to check if THEY are hitting the player 
+    // This also forces enemies to check if THEY are hitting the player
     var renderEnemies = function (enemyList) {
         for (var i = 0; i < enemyList.length; i++) {
             console.log(enemyList[i]);
@@ -67,17 +67,17 @@ function initCanvas(){
 
     function Launcher(){
         // bullet location (ubicación de balas)
-        this.y = 500, 
-        this.x = cW*.5-25, 
-        this.w = 100, 
-        this.h = 100,   
-        this.direccion, 
+        this.y = 500,
+        this.x = cW*.5-25,
+        this.w = 100,
+        this.h = 100,
+        this.direccion,
         this.bg="white", // bullet color (color de bala)
         this.misiles = [];
 
          // If you wanted to use different fonts or messages for the player losing you can change it accordingly.
          this.gameStatus = {
-            over: false, 
+            over: false,
             message: "",
             fillStyle: 'red',
             font: 'italic bold 36px Arial, sans-serif',
@@ -110,7 +110,7 @@ function initCanvas(){
                 clearInterval(animateInterval); // Stop the game animation loop
                 ctx.fillStyle = 'yellow';
                 ctx.font = this.gameStatus.font;
-                ctx.fillText('You win!', cW * .5 - 80, 50);
+                ctx.fillText('Has Guanyat!', cW * .5 - 80, 50);
             }
         }
         // Detectar impacto de bullet (bala)
@@ -118,9 +118,9 @@ function initCanvas(){
             console.log('crush');
             for (var i = 0; i < enemies.length; i++) {
                 var e = enemies[i];
-                if(m.x+m.w >= e.x && 
-                   m.x <= e.x+e.w && 
-                   m.y >= e.y && 
+                if(m.x+m.w >= e.x &&
+                   m.x <= e.x+e.w &&
+                   m.y >= e.y &&
                    m.y <= e.y+e.h){
                     this.misiles.splice(this.misiles[mi],1); // Remove the missile
                     enemies.splice(i, 1); // Remove the enemy that the missile hit
@@ -133,7 +133,7 @@ function initCanvas(){
             // If location of ship is greater than 550 then we know it passed lower level
             if(enemy.y > 550){
                 this.gameStatus.over = true;
-                this.gameStatus.message = 'Enemy(s) have passed!';
+                this.gameStatus.message = 'Els Enemigs han passat!';
             }
             // Esto detecta un choque de la nave con enemigos
             //console.log(this);
@@ -147,10 +147,10 @@ function initCanvas(){
             if ((enemy.y < this.y + 25 && enemy.y > this.y - 25) &&
                 (enemy.x < this.x + 45 && enemy.x > this.x - 45)) { // Checking if enemy is on the left or right of spaceship
                     this.gameStatus.over = true;
-                    this.gameStatus.message = 'You Died!'
+                    this.gameStatus.message = 'Has Mort!'
                 }
 
-            if(this.gameStatus.over === true){  
+            if(this.gameStatus.over === true){
                 clearInterval(animateInterval); // Stop the game animation loop
                 ctx.fillStyle = this.gameStatus.fillStyle; // set color to text
                 ctx.font = this.gameStatus.font;
@@ -159,7 +159,7 @@ function initCanvas(){
             }
         }
     }
-    
+
     var launcher = new Launcher();
     function animate(){
         ctx.clearRect(0, 0, cW, cH);
@@ -167,20 +167,20 @@ function initCanvas(){
         renderEnemies(enemies);
     }
     var animateInterval = setInterval(animate, 6);
-    
+
     var left_btn  = document.getElementById('left_btn');
     var right_btn = document.getElementById('right_btn');
-    var fire_btn  = document.getElementById('fire_btn'); 
+    var fire_btn  = document.getElementById('fire_btn');
 
    document.addEventListener('keydown', function(event) {
         if(event.keyCode == 37) // left arrow
         {
-         launcher.direccion = 'left';  
+         launcher.direccion = 'left';
             if(launcher.x < cW*.2-130){
                 launcher.x+=0;
                 launcher.direccion = '';
             }
-       }    
+       }
     });
 
     document.addEventListener('keyup', function(event) {
@@ -189,7 +189,7 @@ function initCanvas(){
          launcher.x+=0;
          launcher.direccion = '';
         }
-    }); 
+    });
 
     document.addEventListener('keydown', function(event) {
         if(event.keyCode == 39) // right arrow
@@ -199,22 +199,22 @@ function initCanvas(){
             launcher.x-=0;
             launcher.direccion = '';
          }
-        
+
         }
     });
 
     document.addEventListener('keyup', function(event) {
         if(event.keyCode == 39) // right arrow
         {
-         launcher.x-=0;   
+         launcher.x-=0;
          launcher.direccion = '';
         }
-    }); 
+    });
 
     document.addEventListener('keydown', function(event){
          if(event.keyCode == 38) // up arrow
          {
-           launcher.direccion = 'upArrow';  
+           launcher.direccion = 'upArrow';
            if(launcher.y < cH*.2-80){
               launcher.y += 0;
               launcher.direccion = '';
@@ -233,7 +233,7 @@ function initCanvas(){
     document.addEventListener('keydown', function(event){
          if(event.keyCode == 40) // down arrow
          {
-           launcher.direccion = 'downArrow';  
+           launcher.direccion = 'downArrow';
           if(launcher.y > cH - 110){
             launcher.y -= 0;
             launcher.direccion = '';
