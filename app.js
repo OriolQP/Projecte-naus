@@ -124,7 +124,7 @@ function initCanvas(){
                    m.y <= e.y+e.h){
                     this.misiles.splice(this.misiles[mi],1); // Remove the missile
                     enemies.splice(i, 1); // Remove the enemy that the missile hit
-                    document.querySelector('.barra').innerHTML = "Destroyed "+ e.id+ " ";
+                    document.querySelector('.barra').innerHTML = "Destruit "+ e.id+ " ";
                 }
             }
         }
