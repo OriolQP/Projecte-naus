@@ -7,7 +7,7 @@ function initCanvas(){
 
     // backgroundImage y naveImage
     backgroundImage.src = "images/background-pic.jpg";
-    naveImage.src       = "images/spaceship-pic.png"; 
+    naveImage.src       = "images/spaceship-pic.png";
     // Enemics fotos
     enemiespic1.src     = "images/enemigo1.png";
     enemiespic2.src     = "images/enemigo2.png";
@@ -15,7 +15,6 @@ function initCanvas(){
     var cW = ctx.canvas.width; // 700px
     var cH = ctx.canvas.height;// 600px
 
-    // template for naves
     var enemyTemplate = function(options){
         return {
             id: options.id || '',
@@ -123,7 +122,7 @@ function initCanvas(){
         this.hitDetectLowerLevel = function(enemy){
             if(enemy.y > 550){
                 this.gameStatus.over = true;
-                this.gameStatus.message = 'Els Enemigs han passat!';
+                this.gameStatus.message = 'Els Enemics han passat!';
             }
             if(enemy.id === 'enemy3'){
                 //console.log(this.y);
