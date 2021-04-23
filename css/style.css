@@ -16,12 +16,13 @@ body { margin:10px; background-image: url("../images/wall.jpg"); }
   border:#000 1px solid;
 }
 .boton{
-    color:black;
+    color:red;
     font-size: 40px;
-    background-color: white;
+    background-color: black;
     cursor: pointer;
     border-radius: 8px;
-    border:2px solid black;
+    border:2px solid white;
+    transition:all 250ms ease-in-out;
 }
 .boton:hover{
     background-color: white;
