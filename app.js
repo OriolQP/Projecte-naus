@@ -133,7 +133,7 @@ function initCanvas(){
             // If location of ship is greater than 550 then we know it passed lower level
             if(enemy.y > 550){
                 this.gameStatus.over = true;
-                this.gameStatus.message = 'Els Enemigs han passat!';
+                this.gameStatus.message = 'Els enemigs han passat!';
             }
             // Esto detecta un choque de la nave con enemigos
             //console.log(this);
