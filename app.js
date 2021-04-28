@@ -108,7 +108,7 @@ function initCanvas(){
                    m.y <= e.y+e.h){
                     this.misiles.splice(this.misiles[mi],1);
                     enemies.splice(i, 1);
-                    document.querySelector('.barra').innerHTML = "Destruit"+ e.id+ " ";
+                    document.querySelector('.barra').innerHTML = "Destruit "+ e.id+ " ";
                 }
             }
         }
