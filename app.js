@@ -23,27 +23,27 @@ function initCanvas(){
         }
     }
     var enemies = [
-                   new enemyTemplate({id: "enemic1", x: 100, y: -20, w: 50, h: 30 }),
-                   new enemyTemplate({id: "enemic2", x: 225, y: -20, w: 50, h: 30 }),
-                   new enemyTemplate({id: "enemic3", x: 350, y: -20, w: 80, h: 30 }),
-                   new enemyTemplate({id: "enemic4", x:100,  y:-70,  w:80,  h: 30}),
-                   new enemyTemplate({id: "enemic5", x:225,  y:-70,  w:50,  h: 30}),
-                   new enemyTemplate({id: "enemic6", x:350,  y:-70,  w:50,  h: 30}),
-                   new enemyTemplate({id: "enemic7", x:475,  y:-70,  w:50,  h: 30}),
-                   new enemyTemplate({id: "enemic8", x:600,  y:-70,  w:80,  h: 30}),
-                   new enemyTemplate({id: "enemic9", x:475,  y:-20,  w:50,  h: 30}),
-                   new enemyTemplate({id: "enemic10",x: 600, y: -20, w: 50, h: 30}),
+                   new enemyTemplate({id: "enemics1", x: 100, y: -20, w: 50, h: 30 }),
+                   new enemyTemplate({id: "enemics2", x: 225, y: -20, w: 50, h: 30 }),
+                   new enemyTemplate({id: "enemics3", x: 350, y: -20, w: 80, h: 30 }),
+                   new enemyTemplate({id: "enemics4", x:100,  y:-70,  w:80,  h: 30}),
+                   new enemyTemplate({id: "enemics5", x:225,  y:-70,  w:50,  h: 30}),
+                   new enemyTemplate({id: "enemics6", x:350,  y:-70,  w:50,  h: 30}),
+                   new enemyTemplate({id: "enemics7", x:475,  y:-70,  w:50,  h: 30}),
+                   new enemyTemplate({id: "enemics8", x:600,  y:-70,  w:80,  h: 30}),
+                   new enemyTemplate({id: "enemics9", x:475,  y:-20,  w:50,  h: 30}),
+                   new enemyTemplate({id: "enemics10",x: 600, y: -20, w: 50, h: 30}),
 
-                   new enemyTemplate({ id: "enemic11", x: 100, y: -220, w: 50, h: 30, image: enemiespic2 }),
-                   new enemyTemplate({ id: "enemic12", x: 225, y: -220, w: 50, h: 30, image: enemiespic2 }),
-                   new enemyTemplate({ id: "enemic13", x: 350, y: -220, w: 80, h: 50, image: enemiespic2 }),
-                   new enemyTemplate({ id: "enemic14", x: 100, y: -270, w: 80, h: 50, image: enemiespic2 }),
-                   new enemyTemplate({ id: "enemic15", x: 225, y: -270, w: 50, h: 30, image: enemiespic2 }),
-                   new enemyTemplate({ id: "enemic16", x: 350, y: -270, w: 50, h: 30, image: enemiespic2 }),
-                   new enemyTemplate({ id: "enemic17", x: 475, y: -270, w: 50, h: 30, image: enemiespic2 }),
-                   new enemyTemplate({ id: "enemic18", x: 600, y: -270, w: 80, h: 50, image: enemiespic2 }),
-                   new enemyTemplate({ id: "enemic19", x: 475, y: -200, w: 50, h: 30, image: enemiespic2 }),
-                   new enemyTemplate({ id: "enemic20", x: 600, y: -200, w: 50, h: 30, image: enemiespic2 })
+                   new enemyTemplate({ id: "enemics11", x: 100, y: -220, w: 50, h: 30, image: enemiespic2 }),
+                   new enemyTemplate({ id: "enemics12", x: 225, y: -220, w: 50, h: 30, image: enemiespic2 }),
+                   new enemyTemplate({ id: "enemics13", x: 350, y: -220, w: 80, h: 50, image: enemiespic2 }),
+                   new enemyTemplate({ id: "enemics14", x: 100, y: -270, w: 80, h: 50, image: enemiespic2 }),
+                   new enemyTemplate({ id: "enemics15", x: 225, y: -270, w: 50, h: 30, image: enemiespic2 }),
+                   new enemyTemplate({ id: "enemics16", x: 350, y: -270, w: 50, h: 30, image: enemiespic2 }),
+                   new enemyTemplate({ id: "enemics17", x: 475, y: -270, w: 50, h: 30, image: enemiespic2 }),
+                   new enemyTemplate({ id: "enemics18", x: 600, y: -270, w: 80, h: 50, image: enemiespic2 }),
+                   new enemyTemplate({ id: "enemics19", x: 475, y: -200, w: 50, h: 30, image: enemiespic2 }),
+                   new enemyTemplate({ id: "enemics20", x: 600, y: -200, w: 50, h: 30, image: enemiespic2 })
                  ];
 
     var renderEnemies = function (enemyList) {
