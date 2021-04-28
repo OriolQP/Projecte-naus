@@ -23,27 +23,27 @@ function initCanvas(){
         }
     }
     var enemies = [
-                   new enemyTemplate({id: "enemy1", x: 100, y: -20, w: 50, h: 30 }),
-                   new enemyTemplate({id: "enemy2", x: 225, y: -20, w: 50, h: 30 }),
-                   new enemyTemplate({id: "enemy3", x: 350, y: -20, w: 80, h: 30 }),
-                   new enemyTemplate({id: "enemy4", x:100,  y:-70,  w:80,  h: 30}),
-                   new enemyTemplate({id: "enemy5", x:225,  y:-70,  w:50,  h: 30}),
-                   new enemyTemplate({id: "enemy6", x:350,  y:-70,  w:50,  h: 30}),
-                   new enemyTemplate({id: "enemy7", x:475,  y:-70,  w:50,  h: 30}),
-                   new enemyTemplate({id: "enemy8", x:600,  y:-70,  w:80,  h: 30}),
-                   new enemyTemplate({id: "enemy9", x:475,  y:-20,  w:50,  h: 30}),
-                   new enemyTemplate({id: "enemy10",x: 600, y: -20, w: 50, h: 30}),
+                   new enemyTemplate({id: "enemic1", x: 100, y: -20, w: 50, h: 30 }),
+                   new enemyTemplate({id: "enemic2", x: 225, y: -20, w: 50, h: 30 }),
+                   new enemyTemplate({id: "enemic3", x: 350, y: -20, w: 80, h: 30 }),
+                   new enemyTemplate({id: "enemic4", x:100,  y:-70,  w:80,  h: 30}),
+                   new enemyTemplate({id: "enemic5", x:225,  y:-70,  w:50,  h: 30}),
+                   new enemyTemplate({id: "enemic6", x:350,  y:-70,  w:50,  h: 30}),
+                   new enemyTemplate({id: "enemic7", x:475,  y:-70,  w:50,  h: 30}),
+                   new enemyTemplate({id: "enemic8", x:600,  y:-70,  w:80,  h: 30}),
+                   new enemyTemplate({id: "enemic9", x:475,  y:-20,  w:50,  h: 30}),
+                   new enemyTemplate({id: "enemic10",x: 600, y: -20, w: 50, h: 30}),
 
-                   new enemyTemplate({ id: "enemy11", x: 100, y: -220, w: 50, h: 30, image: enemiespic2 }),
-                   new enemyTemplate({ id: "enemy12", x: 225, y: -220, w: 50, h: 30, image: enemiespic2 }),
-                   new enemyTemplate({ id: "enemy13", x: 350, y: -220, w: 80, h: 50, image: enemiespic2 }),
-                   new enemyTemplate({ id: "enemy14", x: 100, y: -270, w: 80, h: 50, image: enemiespic2 }),
-                   new enemyTemplate({ id: "enemy15", x: 225, y: -270, w: 50, h: 30, image: enemiespic2 }),
-                   new enemyTemplate({ id: "enemy16", x: 350, y: -270, w: 50, h: 30, image: enemiespic2 }),
-                   new enemyTemplate({ id: "enemy17", x: 475, y: -270, w: 50, h: 30, image: enemiespic2 }),
-                   new enemyTemplate({ id: "enemy18", x: 600, y: -270, w: 80, h: 50, image: enemiespic2 }),
-                   new enemyTemplate({ id: "enemy19", x: 475, y: -200, w: 50, h: 30, image: enemiespic2 }),
-                   new enemyTemplate({ id: "enemy20", x: 600, y: -200, w: 50, h: 30, image: enemiespic2 })
+                   new enemyTemplate({ id: "enemic11", x: 100, y: -220, w: 50, h: 30, image: enemiespic2 }),
+                   new enemyTemplate({ id: "enemic12", x: 225, y: -220, w: 50, h: 30, image: enemiespic2 }),
+                   new enemyTemplate({ id: "enemic13", x: 350, y: -220, w: 80, h: 50, image: enemiespic2 }),
+                   new enemyTemplate({ id: "enemic14", x: 100, y: -270, w: 80, h: 50, image: enemiespic2 }),
+                   new enemyTemplate({ id: "enemic15", x: 225, y: -270, w: 50, h: 30, image: enemiespic2 }),
+                   new enemyTemplate({ id: "enemic16", x: 350, y: -270, w: 50, h: 30, image: enemiespic2 }),
+                   new enemyTemplate({ id: "enemic17", x: 475, y: -270, w: 50, h: 30, image: enemiespic2 }),
+                   new enemyTemplate({ id: "enemic18", x: 600, y: -270, w: 80, h: 50, image: enemiespic2 }),
+                   new enemyTemplate({ id: "enemic19", x: 475, y: -200, w: 50, h: 30, image: enemiespic2 }),
+                   new enemyTemplate({ id: "enemic20", x: 600, y: -200, w: 50, h: 30, image: enemiespic2 })
                  ];
 
     var renderEnemies = function (enemyList) {
@@ -108,17 +108,16 @@ function initCanvas(){
                    m.y <= e.y+e.h){
                     this.misiles.splice(this.misiles[mi],1);
                     enemies.splice(i, 1);
-                    document.querySelector('.barra').innerHTML = "Destruit "+ e.id+ " ";
+                    document.querySelector('.barra').innerHTML = "Destruit"+ e.id+ " ";
                 }
             }
         }
         this.hitDetectLowerLevel = function(enemy){
             if(enemy.y > 550){
                 this.gameStatus.over = true;
-                this.gameStatus.message = 'Els enemigs han passat!';
+                this.gameStatus.message = 'Els enemics han passat!';
             }
             if(enemy.id === 'enemy3'){
-                //console.log(this.y);
                 console.log(this.x);
             }
             if ((enemy.y < this.y + 25 && enemy.y > this.y - 25) &&
