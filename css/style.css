@@ -12,7 +12,7 @@ body { margin:10px; background-image: url("../images/wall.jpg"); }
   height: 20px; width: 700px;
 }
 #my_canvas{
-  background:#000000;
+  background:#01011d;
   border:#000 1px solid;
 }
 .boton{
