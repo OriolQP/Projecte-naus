@@ -4,11 +4,17 @@ function initCanvas(){
     var naveImage   = new Image();
     var enemiespic1  = new Image();
     var enemiespic2 = new Image();
+    var enemiespic3 = new Image();
+    var enemiespic4 = new Image();
+    var enemiespic5 = new Image();
 
     backgroundImage.src = "images/background-pic.jpg";
     naveImage.src       = "images/spaceship-pic.png";
     enemiespic1.src     = "images/enemigo1.png";
     enemiespic2.src     = "images/enemigo2.png";
+    enemiespic3.src     = "images/enemigo3.png";
+    enemiespic4.src     = "images/enemigo4.png";
+    enemiespic5.src     = "images/enemigo5.png";
 
     var cW = ctx.canvas.width;
     var cH = ctx.canvas.height;
@@ -43,7 +49,40 @@ function initCanvas(){
                    new enemyTemplate({ id: "enemics17", x: 475, y: -270, w: 50, h: 30, image: enemiespic2 }),
                    new enemyTemplate({ id: "enemics18", x: 600, y: -270, w: 80, h: 50, image: enemiespic2 }),
                    new enemyTemplate({ id: "enemics19", x: 475, y: -200, w: 50, h: 30, image: enemiespic2 }),
-                   new enemyTemplate({ id: "enemics20", x: 600, y: -200, w: 50, h: 30, image: enemiespic2 })
+                   new enemyTemplate({ id: "enemics20", x: 600, y: -200, w: 50, h: 30, image: enemiespic2 }),
+
+                   new enemyTemplate({ id: "enemics21", x: 100, y: -420, w: 50, h: 30, image: enemiespic3 }),
+                   new enemyTemplate({ id: "enemics22", x: 225, y: -420, w: 50, h: 30, image: enemiespic3 }),
+                   new enemyTemplate({ id: "enemics23", x: 350, y: -420, w: 80, h: 50, image: enemiespic3 }),
+                   new enemyTemplate({ id: "enemics24", x: 100, y: -470, w: 80, h: 50, image: enemiespic3 }),
+                   new enemyTemplate({ id: "enemics25", x: 225, y: -470, w: 50, h: 30, image: enemiespic3 }),
+                   new enemyTemplate({ id: "enemics26", x: 350, y: -470, w: 50, h: 30, image: enemiespic3 }),
+                   new enemyTemplate({ id: "enemics27", x: 475, y: -470, w: 50, h: 30, image: enemiespic3 }),
+                   new enemyTemplate({ id: "enemics28", x: 600, y: -470, w: 80, h: 50, image: enemiespic3 }),
+                   new enemyTemplate({ id: "enemics29", x: 475, y: -400, w: 50, h: 30, image: enemiespic3 }),
+                   new enemyTemplate({ id: "enemics30", x: 600, y: -400, w: 50, h: 30, image: enemiespic3 }),
+
+                   new enemyTemplate({ id: "enemics31", x: 100, y: -620, w: 50, h: 30, image: enemiespic4 }),
+                   new enemyTemplate({ id: "enemics32", x: 225, y: -620, w: 50, h: 30, image: enemiespic4 }),
+                   new enemyTemplate({ id: "enemics33", x: 350, y: -620, w: 80, h: 50, image: enemiespic4 }),
+                   new enemyTemplate({ id: "enemics34", x: 100, y: -670, w: 80, h: 50, image: enemiespic4 }),
+                   new enemyTemplate({ id: "enemics35", x: 225, y: -670, w: 50, h: 30, image: enemiespic4 }),
+                   new enemyTemplate({ id: "enemics36", x: 350, y: -670, w: 50, h: 30, image: enemiespic4 }),
+                   new enemyTemplate({ id: "enemics37", x: 475, y: -670, w: 50, h: 30, image: enemiespic4 }),
+                   new enemyTemplate({ id: "enemics38", x: 600, y: -670, w: 80, h: 50, image: enemiespic4 }),
+                   new enemyTemplate({ id: "enemics39", x: 475, y: -600, w: 50, h: 30, image: enemiespic4 }),
+                   new enemyTemplate({ id: "enemics40", x: 600, y: -600, w: 50, h: 30, image: enemiespic4 }),
+
+                   new enemyTemplate({ id: "enemics41", x: 100, y: -820, w: 50, h: 30, image: enemiespic5 }),
+                   new enemyTemplate({ id: "enemics42", x: 225, y: -820, w: 50, h: 30, image: enemiespic5 }),
+                   new enemyTemplate({ id: "enemics43", x: 350, y: -820, w: 80, h: 50, image: enemiespic5 }),
+                   new enemyTemplate({ id: "enemics44", x: 100, y: -870, w: 80, h: 50, image: enemiespic5 }),
+                   new enemyTemplate({ id: "enemics45", x: 225, y: -870, w: 50, h: 30, image: enemiespic5 }),
+                   new enemyTemplate({ id: "enemics46", x: 350, y: -870, w: 50, h: 30, image: enemiespic5 }),
+                   new enemyTemplate({ id: "enemics47", x: 475, y: -870, w: 50, h: 30, image: enemiespic5 }),
+                   new enemyTemplate({ id: "enemics48", x: 600, y: -870, w: 80, h: 50, image: enemiespic5 }),
+                   new enemyTemplate({ id: "enemics49", x: 475, y: -800, w: 50, h: 30, image: enemiespic5 }),
+                   new enemyTemplate({ id: "enemics50", x: 600, y: -800, w: 50, h: 30, image: enemiespic5 })
                  ];
 
     var renderEnemies = function (enemyList) {
@@ -60,7 +99,7 @@ function initCanvas(){
         this.w = 100,
         this.h = 100,
         this.direccion,
-        this.bg="white",
+        this.bg="red",
         this.misiles = [];
 
          this.gameStatus = {
