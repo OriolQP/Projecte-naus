@@ -10,7 +10,9 @@
         padding:0;
       }
       body{
-        background: #f5f5dc;
+        background-image: url(https://www.xgn.nl/images/articles/2019/201904/_970x545_crop_center-center_82_line/mejores-juegos-de-naves-espaciales-para-pc-gratis-de-la-historia-149661.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
       }
       #login{
         display: flex;
@@ -20,6 +22,7 @@
         transform: translate(-50%, -50%);
         top: 50%;
         left: 50%;
+        line-height : 35px;
         background-color: white;
         border-radius: 30px;
         align-items: center;
