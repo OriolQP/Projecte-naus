@@ -17,8 +17,8 @@
       #login{
         display: flex;
         position: absolute;
-        width: 400px;
-        height: 400px;
+        width: 300px;
+        height: 200px;
         transform: translate(-50%, -50%);
         top: 50%;
         left: 50%;
