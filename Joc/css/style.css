@@ -21,7 +21,7 @@ body { margin:10px; background-image: url("../images/wall.jpg"); }
 }
 .boton{
     position: absolute;
-    color:red;
+    color:white;
     font-size: 40px;
     background-color: black;
     cursor: pointer;
