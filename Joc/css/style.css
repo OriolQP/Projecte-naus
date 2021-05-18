@@ -1,5 +1,9 @@
 body { margin:10px; background-image: url("../images/wall.jpg"); }
 
+*{
+  overflow-y: hidden;
+}
+
 .container {
   width:800px;
   margin:0 auto;
@@ -16,15 +20,39 @@ body { margin:10px; background-image: url("../images/wall.jpg"); }
   border:#000 1px solid;
 }
 .boton{
+    position: absolute;
     color:red;
     font-size: 40px;
     background-color: black;
     cursor: pointer;
     border-radius: 8px;
     border:2px solid white;
+    margin:10px;
+    padding:10px;
     transition:all 250ms ease-in-out;
+    right: 2%;
+    top:0%;
 }
 .boton:hover{
     background-color: white;
     color: #000000;
+}
+
+#left_btn{
+  top:15%;
+  right:12%;
+}
+
+#fire_btn{
+  right:3%;
+}
+
+#restart{
+  top:30%;
+  right:7%;
+}
+
+#right_btn{
+  top:15%;
+  right:1%;
 }
